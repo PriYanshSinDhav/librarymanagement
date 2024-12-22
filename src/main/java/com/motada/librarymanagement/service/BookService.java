@@ -11,6 +11,7 @@ import com.motada.librarymanagement.model.exceptions.UpdateException;
 import com.motada.librarymanagement.model.request.BookCreateRequest;
 import com.motada.librarymanagement.model.response.*;
 import com.motada.librarymanagement.repo.BookRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -19,14 +20,14 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.List;
 
 @Service
+@RequiredArgsConstructor
 public class BookService extends BaseService {
 
 
-    @Autowired
-    private BookRepository bookRepository;
+
+    private final BookRepository bookRepository;
 
 
     @Transactional(rollbackFor = CreateException.class)

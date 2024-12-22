@@ -1,12 +1,11 @@
 package com.motada.librarymanagement;
 
 
-import com.motada.librarymanagement.entity.Book;
+
 import com.motada.librarymanagement.entity.Member;
 import com.motada.librarymanagement.model.exceptions.CreateException;
 import com.motada.librarymanagement.model.exceptions.DeleteException;
 import com.motada.librarymanagement.model.exceptions.SearchException;
-import com.motada.librarymanagement.model.request.BookCreateRequest;
 import com.motada.librarymanagement.model.request.MemberCreateRequest;
 import com.motada.librarymanagement.model.response.GenericResponse;
 import com.motada.librarymanagement.repo.MemberRepository;
@@ -15,8 +14,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.Optional;
 

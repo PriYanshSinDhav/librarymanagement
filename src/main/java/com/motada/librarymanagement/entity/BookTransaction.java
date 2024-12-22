@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 
 import java.sql.Timestamp;
-import java.util.Date;
 
 @Entity
 @Data
@@ -43,5 +42,4 @@ public class BookTransaction{
     private Timestamp createdOn;
 
 
-    // Getters and setters omitted for brevity
 }

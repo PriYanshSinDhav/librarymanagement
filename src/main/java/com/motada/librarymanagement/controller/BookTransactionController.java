@@ -2,8 +2,10 @@
 package com.motada.librarymanagement.controller;
 
 import com.motada.librarymanagement.entity.BookTransaction;
+import com.motada.librarymanagement.model.SearchRequest;
 import com.motada.librarymanagement.model.request.BookTransactionRequest;
 import com.motada.librarymanagement.model.response.GenericResponse;
+import com.motada.librarymanagement.model.response.TransactionListResponse;
 import com.motada.librarymanagement.service.BookTransactionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -27,9 +29,9 @@ public class BookTransactionController {
 
     }
 
-    @GetMapping
-    public List<BookTransaction> getAllTransactions() {
-        return transactionService.getAllTransactions();
+    @PostMapping("/all")
+    public GenericResponse<TransactionListResponse> getAllTransactions(@RequestBody SearchRequest searchRequest) {
+        return transactionService.getAllTransactions(searchRequest);
     }
 
     @PutMapping("/{id}")

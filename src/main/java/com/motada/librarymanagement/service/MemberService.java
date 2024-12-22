@@ -112,6 +112,7 @@ public class MemberService extends BaseService{
             throw new SearchException("Cannot delete: Member not found with ID: " + id);
         }
         try{
+            
             Member member = memberRepository.findById(id).get();
 
             member.setDeleted(true);
